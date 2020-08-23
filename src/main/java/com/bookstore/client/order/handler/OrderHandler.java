@@ -27,11 +27,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-/**
- * company: www.abc.com
- * Author: 29746
- * Create Data: 2020/4/26
- */
+
 @Controller
 @RequestMapping("/client/order")
 public class OrderHandler {

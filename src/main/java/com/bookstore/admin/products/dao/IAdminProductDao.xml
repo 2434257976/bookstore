@@ -20,10 +20,10 @@
                 and category = #{product.category}
             </if>
             <if test="minprice>0">
-                and price &gt;= #{minprice}
+                and price &gt;#{minprice}
             </if>
             <if test="maxprice>0">
-                and price &lt;= #{maxprice}
+                and price &lt;=#{maxprice}
             </if>
         </where>
     </select>

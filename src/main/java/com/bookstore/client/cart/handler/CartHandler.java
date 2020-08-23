@@ -10,11 +10,6 @@ import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * company: www.abc.com
- * Author: 29746
- * Create Data: 2020/4/23
- */
 @Controller
 @RequestMapping("/client/cart/")
 public class CartHandler {

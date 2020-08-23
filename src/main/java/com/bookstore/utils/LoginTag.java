@@ -6,11 +6,7 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 import java.io.IOException;
-/**
- * company: www.abc.com
- * Author: 29746
- * Create Data: 2020/4/20
- */
+
 public class LoginTag extends SimpleTagSupport {
     @Override
     public void doTag() throws JspException, IOException {

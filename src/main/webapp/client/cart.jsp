@@ -81,7 +81,7 @@
 															<input name="text" type="text" value="${entry.value}" readonly style="width:40px;text-align:center" />
 															<input type="button" value='+' style="width:20px"
 															onclick="changeProductNum('${entry.value+1}','${entry.key.pnum}','${entry.key.id}')">
-
+                                                                <%--购买的数量 库存 商品的ID--%>
 														</td>
 														<td width="10%">${entry.key.pnum}</td>
 														<td width="10%">${entry.key.price*entry.value}</td>

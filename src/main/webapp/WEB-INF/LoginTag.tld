@@ -12,9 +12,9 @@
     <!-- 版本号 -->
     <tlib-version>1.0</tlib-version>
     <!-- 短名 -->
-    <short-name>lwq</short-name>
+    <short-name>ycg</short-name>
     <!-- uri ：导包 -->
-    <uri>http://lwq.login-tags</uri>
+    <uri>http://ycg.login-tags</uri>
 
     <!-- 定义一个标签 -->
     <tag>

@@ -32,7 +32,7 @@ public class MailUtils {
 		//定义验证信息
 		Authenticator auth = new Authenticator() {
 			public PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("2974673297@qq.com", "wdihmctflgtfdged");
+				return new PasswordAuthentication("2434257976@qq.com", "itucamellrewdjbf");
 			}
 		};
 
@@ -43,7 +43,7 @@ public class MailUtils {
 		Message message = new MimeMessage(session);
 
 		//设置发送方
-		message.setFrom(new InternetAddress("2974673297@qq.com"));
+		message.setFrom(new InternetAddress("2434257976@qq.com"));
 		//设置接收方
 		message.setRecipient(RecipientType.TO, new InternetAddress(email));
 		//设置邮件的主题

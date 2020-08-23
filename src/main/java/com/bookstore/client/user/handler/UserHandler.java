@@ -44,12 +44,26 @@ public class UserHandler {
               return "redirect:/client/registersuccess.jsp";
           }else {
               request.setAttribute("fail","新用户注册失败，请重试！");
+
               return "redirect:/client/register.jsp";
           }
 
         }else {//校验码不正确
             request.setAttribute("check_error","校验码错误，请重新输入！");
             return "/client/register.jsp";
+        }
+    }
+
+     //激活用户，根据传入的激活码设置state值为1
+    @RequestMapping("/activeUser")
+    public String activeUser(String activeCode){
+        System.out.println("激活码为："+activeCode);
+        int rows= userService.activeUser(activeCode);
+
+        if(rows>0){
+            return "redirect:/client/activesuccess.jsp";
+        }else {
+            return "redirect:/client/activefail.jsp";
         }
     }
 
@@ -115,25 +129,13 @@ public class UserHandler {
               session.setAttribute("login_user",login_user);
               return "/client/myAccount.jsp";
           }else {//用户未激活
-              request.setAttribute("State_error","用户名和密码正确，但是账号未激活，请激活后重试！");
+              request.setAttribute("State_error","账号未激活，请激活后重试！");
               return "/client/login.jsp";
           }
       }else {
           request.setAttribute("login_error","用户名或密码错误，请重新登录！");
           return "/client/login.jsp";
       }
-    }
-    //激活用户，根据传入的激活码设置state值为1
-    @RequestMapping("/activeUser")
-    public String activeUser(String activeCode){
-        System.out.println("激活码为："+activeCode);
-        int rows= userService.activeUser(activeCode);
-
-        if(rows>0){
-            return "redirect:/client/activesuccess.jsp";
-        }else {
-            return "redirect:/client/activefail.jsp";
-        }
     }
     //用户退出
     @RequestMapping("/logout")

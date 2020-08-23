@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@taglib prefix="lwq" uri="http://lwq.login-tags" %>
+<%@taglib prefix="ycg" uri="http://ycg.login-tags" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -10,7 +10,7 @@
 </head>
 
 <body class="main">
-	<lwq:login/>
+	<ycg:login/>
 	<%-- <p:user /> --%>
 	<jsp:include page="head.jsp" />
 	<jsp:include page="menu_search.jsp" />

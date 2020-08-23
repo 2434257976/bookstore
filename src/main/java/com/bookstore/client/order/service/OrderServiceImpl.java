@@ -9,11 +9,6 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.Map;
 
-/**
- * company: www.abc.com
- * Author: 29746
- * Create Data: 2020/4/26
- */
 @Service
 public class OrderServiceImpl implements IOrderService{
     @Resource

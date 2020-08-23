@@ -31,11 +31,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.List;
 
-/**
- * company: www.abc.com
- * Author: 29746
- * Create Data: 2020/5/13
- */
+
 @Controller
 @RequestMapping("/admin/products")
 public class AdminProductHandler {
@@ -53,7 +49,7 @@ public class AdminProductHandler {
         // }
         return "/admin/products/list.jsp";
     }
-    //按多个条件查询商品信息
+    //查询商品信息按多个条件
     @RequestMapping("/findProductByManyCondition")
     public String findProductByManyCondition(Product product,Double minprice,Double maxprice,Model model){
        List<Product> products= adminProductService.findProductByManyCandition(product,minprice,maxprice);
@@ -68,7 +64,7 @@ public class AdminProductHandler {
     @RequestMapping("/addProduct")
     public String addProduct(Product product, MultipartFile upload, HttpSession session) throws IOException {
         //保存图片
-        String path1="C:\\Users\\29746\\Desktop\\bookstore\\src\\main\\webapp\\productImg";
+        String path1="C:\\Users\\杨成刚\\Desktop\\bookstore\\src\\main\\webapp\\productImg";
         String path= session.getServletContext().getRealPath("/productImg");//获取的是项目发布的真实路径
         //System.out.println("文件上传路径"+path);
         File file=new File(path);
@@ -106,7 +102,7 @@ public class AdminProductHandler {
                targetFile.delete();
            }
            //保存新的图片
-           String path1="C:\\Users\\29746\\Desktop\\bookstore\\src\\main\\webapp\\productImg";
+           String path1="C:\\Users\\杨成刚\\Desktop\\bookstore\\src\\main\\webapp\\productImg";
            String path=session.getServletContext().getRealPath("/productImg");
            String filename=IdUtils.getUUID()+"-"+upload.getOriginalFilename();
            upload.transferTo(new File(path,filename));
@@ -182,6 +178,8 @@ public class AdminProductHandler {
         wb.write(out);
     }
 
+
+//    解决乱码问题
     public static String encodeChineseDownloadFileName(HttpServletRequest request, String pFileName) throws UnsupportedEncodingException {
         String filename = null;
         String agent = request.getHeader("USER-AGENT");

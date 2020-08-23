@@ -16,7 +16,7 @@
 		$.post("${pageContext.request.contextPath}/client/user/findUsername?username="+$("#username").val(),
 		function (data) {
 			if (data=="EXIST"){
-				alert("用户名已存在，请重试！");
+				alert("会员名已存在，请重试！");
 				$("#username").val("");
 			}
 		});

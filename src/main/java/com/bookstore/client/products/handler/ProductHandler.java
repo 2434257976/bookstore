@@ -14,11 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 
-/**
- * company: www.abc.com
- * Author: 29746
- * Create Data: 2020/4/20
- */
 @Controller
 @RequestMapping("/client/product")
 public class ProductHandler {
